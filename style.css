@@ -1,0 +1,106 @@
+.headerSection{
+    color: black;
+    font-size: 40px;
+    position: absolute;
+    top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+}
+
+.dayTime{
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    text-align: center;
+    border: solid;
+    height: 200px;
+    width: 400px;
+}
+
+.dayDescription{
+    margin-top: 70px;
+    font-size: 20px;
+}
+
+
+.nightTime{
+    position: absolute;
+    top: 300px;
+    right: 100px;
+    text-align: center;
+    border: solid;
+    height: 200px;
+    width: 400px;
+}
+
+.nightDescription{
+    margin-top: 70px;
+    font-size: 20px;
+}
+
+.backHome{
+    position: absolute;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 5px;
+}
+
+.dayNumbers{
+    top: 300px;
+    position: absolute;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.numDayCount{
+    margin-top: 50px;
+    position: absolute;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+
+
+.prioOrder{
+    top: 100px;
+    margin-top: 40px;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.chaosTime{
+    top: 50px;
+    margin-top: 40px;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin:50px;
+}
+
+.larger{
+    font-size: 30px;
+}
+
+.headerSection1{
+    font-size: 50px;
+}
