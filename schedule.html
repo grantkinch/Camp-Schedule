@@ -17,14 +17,8 @@
 
             <!--The Code for the Day Button on the Home Screen-->
             <div id = "dayTime" class = "dayTime">
-                <p class = dayDescription>Build the Day Time Schedule here!</p>
+                <p class = dayDescription>Build the Schedule here!</p>
                 <button class = "btnDay" id = "btnDay">Enter Day Builder</button>
-            </div>
-
-            <!--The Code for the Night Button on the Home Screen-->
-            <div id = "nightTime" class = "nightTime">
-                <p class = nightDescription>Build the Night Time Schedule here!</p>
-                <button class = "btnNight" id = "btnNight">Enter Night Builder</button>
             </div>
 
         </div>
@@ -40,13 +34,13 @@
             <!--The Code for the Day Button on the Home Screen-->
             <div id = "numDayCount" class = "numDayCount">
                 <p class= "dayDescription">Insert the amount of groups per unit</p> <br><br>
-                <label>Amount of Pods in Hiwood: </label>
-                <input placeholder="Number 0-9" value="" id= "coreGNum" type="text"/><br><br>
-                <label>Amount of Pods in Winds: </label>
-                <input placeholder="Number 0-9" value="" id= "frontierGNum" type="text"/> <br><br>
                 <label>Amount of Pods in Core: </label>
-                <input placeholder="Number 0-9" value="" id= "hiwoodGNum" type="text"/> <br><br>
+                <input placeholder="Number 0-9" value="" id= "coreGNum" type="text"/><br><br>
                 <label>Amount of Pods in Frontier: </label>
+                <input placeholder="Number 0-9" value="" id= "frontierGNum" type="text"/> <br><br>
+                <label>Amount of Pods in Highwoods: </label>
+                <input placeholder="Number 0-9" value="" id= "hiwoodGNum" type="text"/> <br><br>
+                <label>Amount of Pods in Winds: </label>
                 <input placeholder="Number 0-9" value="" id= "windsGNum" type="text"/> <br><br>
                 <label>Amount of Pods in Day Camp: </label>
                 <input placeholder="Number 0-9" value="" id= "dayCampGNum" type="text"/> <br><br>
@@ -131,37 +125,52 @@
 
             <div id = "headerSection1" class = "headerSection1">Type of Night Activity</div>
             
-            <p>Select Hiwoods type of Night:</p>
-            <label>Unit Night</label>
-            <input type="radio" id="Unit Night" name="nightAct1" value="Unit Night"><br>
-            <label>Pod Night</label>
-            <input type="radio" id="Pod Night" name="nightAct1" value="Pod Night"><br>
-            <label>Tent Night</label>
-            <input type="radio" id="Tent Night" name="nightAct1" value="Tent Night"><br><br>
+            <div id = "nightQHiwood">
+                <p>Select Hiwoods type of Night:</p>
+                <label>Unit Night</label>
+                <input type="radio" id="Unit Night" name="nightAct1" value="Unit Night"><br>
+                <label>Pod Night</label>
+                <input type="radio" id="Pod Night" name="nightAct1" value="Pod Night"><br>
+                <label>Tent Night</label>
+                <input type="radio" id="Tent Night" name="nightAct1" value="Tent Night"><br><br>
+            </div>
+           
 
-            <p>Select Winds type of Night:</p>
-            <label>Unit Night</label>
-            <input type="radio" id="Unit Night" name="nightAct2" value="Unit Night"><br>
-            <label>Pod Night</label>
-            <input type="radio" id="Pod Night" name="nightAct2" value="Pod Night"><br>
-            <label>Tent Night</label>
-            <input type="radio" id="Tent Night" name="nightAct2" value="Tent Night"><br><br>
 
-            <p>Select Core type of Night:</p>
-            <label>Unit Night</label>
-            <input type="radio" id="Unit Night" name="nightAct3" value="Unit Night"><br>
-            <label>Pod Night</label>
-            <input type="radio" id="Pod Night" name="nightAct3" value="Pod Night"><br>
-            <label>Tent Night</label>
-            <input type="radio" id="Tent Night" name="nightAct3" value="Tent Night"><br><br>
+            <div id = "nightQWinds">
+                <p>Select Winds type of Night:</p>
+                <label>Unit Night</label>
+                <input type="radio" id="Unit Night" name="nightAct2" value="Unit Night"><br>
+                <label>Pod Night</label>
+                <input type="radio" id="Pod Night" name="nightAct2" value="Pod Night"><br>
+                <label>Tent Night</label>
+                <input type="radio" id="Tent Night" name="nightAct2" value="Tent Night"><br><br>
+            </div>
+    
 
-            <p>Select Frontier type of Night:</p>
-            <label>Unit Night</label>
-            <input type="radio" id="Unit Night" name="nightAct4" value="Unit Night"><br>
-            <label>Pod Night</label>
-            <input type="radio" id="Pod Night" name="nightAct4" value="Pod Night"><br>
-            <label>Tent Night</label>
-            <input type="radio" id="Tent Night" name="nightAct4" value="Tent Night"><br><br>
+
+            <div id = "nightQCore">
+                <p>Select Core type of Night:</p>
+                <label>Unit Night</label>
+                <input type="radio" id="Unit Night" name="nightAct3" value="Unit Night"><br>
+                <label>Pod Night</label>
+                <input type="radio" id="Pod Night" name="nightAct3" value="Pod Night"><br>
+                <label>Tent Night</label>
+                <input type="radio" id="Tent Night" name="nightAct3" value="Tent Night"><br><br>
+            </div>
+         
+
+
+            <div id = "nightQFrontier">
+                <p>Select Frontier type of Night:</p>
+                <label>Unit Night</label>
+                <input type="radio" id="Unit Night" name="nightAct4" value="Unit Night"><br>
+                <label>Pod Night</label>
+                <input type="radio" id="Pod Night" name="nightAct4" value="Pod Night"><br>
+                <label>Tent Night</label>
+                <input type="radio" id="Tent Night" name="nightAct4" value="Tent Night"><br><br>
+            </div>
+
 
             
         
@@ -319,6 +328,7 @@
             document.getElementById("nightQuestions").style.display = "none";
             document.getElementById("tentQuestions").style.display = "none";
             document.getElementById("chaosTimeNight").style.display = "none";
+            document.getElementById("finalProduct").style.display = "none";
 
 
             // Change the month when the "next" button is pressed
@@ -343,9 +353,41 @@
                 document.getElementById("nightQuestions").style.display = "none";
                 document.getElementById("tentQuestions").style.display = "none";
                 document.getElementById("chaosTimeNight").style.display = "none";
+                document.getElementById("finalProduct").style.display = "none";
                 noKids = [];
                 unitOrder = [];
                 unitsWith = [];
+                currentSessionNames = null;
+                dayCampFirstTaken = [];
+                morningTaken = [];
+                afternoonTaken = []; 
+                nightTaken = [];
+                unitOrder = [];
+                coreOrder = [];
+                frontierOrder = [];
+                hiwoodOrder = [];
+                windsOrder = [];
+                dayCampOrder = [];
+                noKids = [];
+                unitsWith = [];
+
+                finalPlanDay = [];
+                finalPlanNight = [];
+
+                hiwoodGroupNum = 0;
+                windsGroupNum = 0;
+                coreGroupNum = 0;
+                frontierGroupNum = 0;
+                dayCampGroupNum = 0;
+
+                hiwoodNumNight = 0;
+                windsNumNight = 0;
+                coreNumNight = 0;
+                frontierNumNight = 0;
+
+                currUnit = 0;
+                currGroup = 1;
+                currUnitName = "";
             }
 
             function checkGroupNums(){
@@ -355,6 +397,15 @@
                 let hiwoodsNums =  document.getElementById("hiwoodGNum").value;
                 let windsNums = document.getElementById("windsGNum").value;
                 let dayCampNums =  document.getElementById("dayCampGNum").value;
+
+
+
+                console.log(coreNums);
+                console.log(frontierNums);
+                console.log(hiwoodsNums);
+                console.log(windsNums);
+                console.log(dayCampNums);
+
 
                 let sessionSelect = document.getElementsByName('session');
 
@@ -428,10 +479,11 @@
                 frontierGroupNum = frontierNums;
                 dayCampGroupNum = dayCampNums;
 
-                console.log(hiwoodGroupNum);
-                console.log(windsGroupNum);
+
                 console.log(coreGroupNum);
                 console.log(frontierGroupNum);
+                console.log(hiwoodGroupNum);
+                console.log(windsGroupNum);
                 console.log(dayCampGroupNum);
 
                 currentSessionNames = choosenSession;
@@ -460,6 +512,7 @@
                 else{
                     unitsWith.push("Hiwood");
                 }
+
                 if(coreGroupNum == 0){
                     document.getElementById("corePNum1").style.display = "none";
                     noKids.push("Core");
@@ -467,6 +520,7 @@
                 else{
                     unitsWith.push("Core");
                 }
+
                 if(frontierGroupNum == 0){
                     document.getElementById("frontierPNum1").style.display = "none";
                     noKids.push("Frontier");
@@ -474,6 +528,7 @@
                 else{
                     unitsWith.push("Frontier");
                 }
+                
                 if(windsGroupNum == 0){
                     document.getElementById("windsPNum1").style.display = "none";
                     noKids.push("Winds");
@@ -481,6 +536,7 @@
                 else{
                     unitsWith.push("Winds");
                 }
+
                 if(dayCampGroupNum == 0){
                     document.getElementById("dayCampPNum1").style.display = "none";
                     noKids.push("Day Camp");
@@ -530,19 +586,27 @@
                 else if(!noKids.includes("Day Camp") && (dayCampPrio == "" || isNaN(dayCampPrio) || dayCampPrio < 0 || dayCampPrio >= 6)){
                     worked = false;
                 }
-                else if(corePrio == frontierPrio || corePrio == hiwoodsPrio || corePrio == windsPrio || corePrio == dayCampPrio){
+                else if((corePrio == frontierPrio || corePrio == hiwoodsPrio || corePrio == windsPrio || corePrio == dayCampPrio) && corePrio != ""){
                     worked = false;
+                    console.log("check 1");
                 }
-                else if(frontierPrio == hiwoodsPrio || frontierPrio == windsPrio || frontierPrio == dayCampPrio){
+                
+                else if((frontierPrio == hiwoodsPrio || frontierPrio == windsPrio || frontierPrio == dayCampPrio) && frontierPrio != ""){
                     worked = false;
+                    console.log("check 2");
                 }
-                else if(hiwoodsPrio == windsPrio || hiwoodsPrio == dayCampPrio){
+                else if((hiwoodsPrio == windsPrio || hiwoodsPrio == dayCampPrio)&& hiwoodsPrio != ""){
                     worked = false;
+                    console.log("check 3");
                 }     
-                else if(dayCampPrio == windsPrio){
+                else if(dayCampPrio == windsPrio && dayCampPrio != ""){
                     worked = false;
-                }      
-                     
+                    console.log("check 4");
+                }  
+
+                
+
+     
 
                 if(!worked){
                     alert("Please enter a proper priority list!");
@@ -576,7 +640,7 @@
                     else if(frontierPrio == rank){
                         unitOrder.push("Frontier");
                     }
-                    else if( hiwoodsPrio == rank){
+                    else if(hiwoodsPrio == rank){
                         unitOrder.push("Hiwood");
                     }
                     else if(windsPrio == rank){
@@ -602,6 +666,7 @@
                 }
                 else{
                     alert("You have finished? I fucking hope? And shouldn't be here");
+                    return;
                 }
 
                 document.getElementById("unitNameHere").innerHTML = "Current Unit: " + currUnitName;
@@ -636,25 +701,25 @@
                         yu.setAttribute("value", activityLocations[numnum]);
 
                         let brr = document.createElement("BR");
-                        console.log("got here");
+     
 
                         if(currUnitName == "Day Camp"){
                             if(x == 0){
-                                if(!dayCampFirstTaken.includes(activityLocations[numnum])){
+                                if(!dayCampFirstTaken.includes(activityLocations[numnum]) || activityLocations[numnum] == "Other"){
                                     elementInside.appendChild(brr);
                                     elementInside.appendChild(rawr);
                                     elementInside.appendChild(yu);
                                 }
                             }
                             else if (x == 1){
-                                if(!morningTaken.includes(activityLocations[numnum])){
+                                if(!morningTaken.includes(activityLocations[numnum])|| activityLocations[numnum] == "Other"){
                                     elementInside.appendChild(brr);
                                     elementInside.appendChild(rawr);
                                     elementInside.appendChild(yu);
                                 }
                             }
                             else if (x == 2){
-                                if(!afternoonTaken.includes(activityLocations[numnum])){
+                                if(!afternoonTaken.includes(activityLocations[numnum]) || activityLocations[numnum] == "Other"){
                                     elementInside.appendChild(brr);
                                     elementInside.appendChild(rawr);
                                     elementInside.appendChild(yu);
@@ -663,14 +728,14 @@
                         }
                         else if(currUnitName == "Frontier" || currUnitName == "Core"){
                             if(x == 0){
-                                if(!afternoonTaken.includes(activityLocations[numnum])){
+                                if(!afternoonTaken.includes(activityLocations[numnum]) || activityLocations[numnum] == "Other"){
                                     elementInside.appendChild(brr);
                                     elementInside.appendChild(rawr);
                                     elementInside.appendChild(yu);
                                 }
                             }
                             else if (x == 1){
-                                if(!afternoonTaken.includes(activityLocations[numnum])){
+                                if(!afternoonTaken.includes(activityLocations[numnum]) || activityLocations[numnum] == "Other"){
                                     elementInside.appendChild(brr);
                                     elementInside.appendChild(rawr);
                                     elementInside.appendChild(yu);
@@ -679,14 +744,14 @@
                         }
                         else {
                             if(x == 0){
-                                if(!morningTaken.includes(activityLocations[numnum])){
+                                if(!morningTaken.includes(activityLocations[numnum]) || activityLocations[numnum] == "Other"){
                                     elementInside.appendChild(brr);
                                     elementInside.appendChild(rawr);
                                     elementInside.appendChild(yu);
                                 }
                             }
                             else if (x == 1){
-                                if(!morningTaken.includes(activityLocations[numnum])){
+                                if(!morningTaken.includes(activityLocations[numnum])|| activityLocations[numnum] == "Other"){
                                     elementInside.appendChild(brr);
                                     elementInside.appendChild(rawr);
                                     elementInside.appendChild(yu);
@@ -697,7 +762,7 @@
 
                         
                     }
-                    console.log(elementInside);
+
                     element.appendChild(nameOf);
                     element.appendChild(elementInside);
                 }
@@ -724,6 +789,11 @@
                         if(sessionSelect[i].checked == true){
                             winner = sessionSelect[i].value;
                         }
+                    }
+
+                    if(winner == ""){
+                        alert("Please fill out all fields!");
+                        return;
                     }
                     testingTime.push(winner);
                 }
@@ -810,8 +880,27 @@
 
                 if(currUnit == unitOrder.length){
                     console.log(finalPlanDay);
-                    document.getElementById("nightQuestions").style.display = "block";
-                    document.getElementById("chaosTime").style.display = "none";
+                    if(noKids.includes("Core") && noKids.includes("Frontier") && noKids.includes("Hiwood") && noKids.includes("Winds")){
+                        document.getElementById("chaosTime").style.display = "none";
+                    }
+                    else{
+                        document.getElementById("nightQuestions").style.display = "block";
+                        document.getElementById("chaosTime").style.display = "none";
+
+                        if(noKids.includes("Hiwood")){
+                            document.getElementById("nightQHiwood").style.display = "none";
+                        }
+                        if(noKids.includes("Winds")){
+                            document.getElementById("nightQWinds").style.display = "none";
+                        }
+                        if(noKids.includes("Core")){
+                            document.getElementById("nightQCore").style.display = "none";
+                        }
+                        if(noKids.includes("Frontier")){
+                            document.getElementById("nightQFrontier").style.display = "none";
+                        }
+                    }
+                  
                 }
                 else{
                     updateDataGetter();
@@ -834,6 +923,10 @@
                 let choosenWinds = "";
                 let choosenCore = "";
                 let choosenFrontier = "";
+
+
+
+
                 
                 for(let i = 0; i < hiwoodSelect.length; i++) {
                     if(hiwoodSelect[i].checked){
@@ -857,8 +950,20 @@
                     }
                 }
 
-                if(choosenHiwood == "" || choosenWinds == "" || choosenCore == ""|| choosenFrontier == ""){
-                    alert("Please fill out all fields");
+                if(choosenHiwood == "" && !noKids.includes("Hiwood")){
+                    alert("Please fill out Hiwoods");
+                    return;
+                }
+                if(choosenWinds == "" && !noKids.includes("Winds")){
+                    alert("Please fill out Winds");
+                    return;
+                }
+                if(choosenCore == "" && !noKids.includes("Core")){
+                    alert("Please fill out Core");
+                    return;
+                }
+                if(choosenFrontier == "" && !noKids.includes("Frontier")){
+                    alert("Please fill out Frontier");
                     return;
                 }
 
@@ -890,19 +995,19 @@
                     frontierNumNight = frontierGroupNum;
                 }
 
-                if(hiwoodNumNight == 0||windsNumNight == 0 ||  coreNumNight == 0 ||  frontierNumNight==0){
+                if(choosenHiwood == "Tent Night"||choosenWinds == "Tent Night" ||  choosenCore == "Tent Night" ||  choosenFrontier== "Tent Night"){
                     document.getElementById("tentQuestions").style.display = "block";
                     document.getElementById("nightQuestions").style.display = "none";
-                    if(hiwoodNumNight != 0){
+                    if(choosenHiwood != "Tent Night"){
                         document.getElementById("hiwoodTent").style.display = "none";
                     }
-                    if(windsNumNight != 0){
+                    if(choosenWinds != "Tent Night"){
                         document.getElementById("windsTent").style.display = "none";
                     }
-                    if(coreNumNight != 0){
+                    if(choosenCore != "Tent Night"){
                         document.getElementById("coreTent").style.display = "none";
                     }
-                    if(frontierNumNight != 0){
+                    if(choosenFrontier != "Tent Night"){
                         document.getElementById("frontierTent").style.display = "none";
                     }
                 }
@@ -921,7 +1026,7 @@
                 let numTentCore = 0;
                 let numTentFrontier = 0;
 
-                if(hiwoodNumNight==0){
+                if(hiwoodNumNight==0 && !noKids.includes("Hiwood")){
                     numTentHiwood = document.getElementById("hiwoodTentNum").value;
 
                     if(numTentHiwood == "" || isNaN(numTentHiwood) || numTentHiwood < 1 || numTentHiwood >= 10){
@@ -932,7 +1037,7 @@
                     }
                 }
 
-                if(windsNumNight==0){
+                if(windsNumNight==0 && !noKids.includes("Winds")){
                     numTentWinds = document.getElementById("windsTentNum").value;
 
                     if(numTentWinds == "" || isNaN(numTentWinds) || numTentWinds < 1 || numTentWinds >= 10){
@@ -944,7 +1049,7 @@
 
                 }
 
-                if(coreNumNight==0){
+                if(coreNumNight==0 && !noKids.includes("Core")){
                     numTentCore = document.getElementById("coreTentNum").value;
 
                     if(numTentCore == "" || isNaN(numTentCore) || numTentCore < 1 || numTentCore >= 10){
@@ -955,7 +1060,7 @@
                     }
                 }
 
-                if(frontierNumNight==0){
+                if(frontierNumNight==0 && !noKids.includes("Frontier")){
                     numTentFrontier = document.getElementById("frontierTentNum").value;
 
                     if(numTentFrontier == "" || isNaN(numTentFrontier) || numTentFrontier < 1 || numTentFrontier >= 10){
@@ -983,6 +1088,7 @@
                 }
                 else{
                     alert("You have finished? I fucking hope? And shouldn't be here");
+                    return;
                 }
 
                 if(currUnitName == "Day Camp"){
@@ -1011,10 +1117,10 @@
                         yu.setAttribute("value", activityLocations[numnum]);
 
                         let brr = document.createElement("BR");
-                        console.log("got here");
 
 
-                        if(!nightTaken.includes(activityLocations[numnum])){
+
+                        if(!nightTaken.includes(activityLocations[numnum]) || activityLocations[numnum] == "Other"){
                             elementInside.appendChild(brr);
                             elementInside.appendChild(rawr);
                             elementInside.appendChild(yu);
@@ -1036,8 +1142,9 @@
 
                     if(currUnit == unitOrder.length){
                         console.log(finalPlanNight);
-                        // document.getElementById("nightQuestions").style.display = "block";
-                        // document.getElementById("chaosTime").style.display = "none";
+                        document.getElementById("chaosTimeNight").style.display = "none";
+                        showOff();
+
                     }
                     else{
                         choosingNightSetUp();
@@ -1092,16 +1199,90 @@
 
                     if(currUnit == unitOrder.length){
                         console.log(finalPlanNight);
-                        //document.getElementById("nightQuestions").style.display = "block";
-                        //document.getElementById("chaosTime").style.display = "none";
+                        document.getElementById("chaosTimeNight").style.display = "none";
+                        showOff();
+
                     }
                     else{
                         choosingNightSetUp();
                     }
                 }
 
+            }
 
-               
+            function showOff(){
+                document.getElementById("finalProduct").style.display = "block";
+
+
+                // let finalPlanDay = [];
+                //let finalPlanNight = [];
+
+                for (let w = 0; w < finalPlanDay.length; w++){
+                    console.log("I'm in Day");
+
+                    let cont = document.createElement("div");
+                    cont.setAttribute("class", "boxing");
+
+                    let nm = document.createElement("p");
+                    nm.innerHTML = "Unit: " + finalPlanDay[w].unit;
+                    nm.setAttribute("class", "unitName");
+
+                    let gp = document.createElement("p");
+                    gp.innerHTML = "Group Number: " + finalPlanDay[w].group;
+                    gp.setAttribute("class", "group Numbers");
+
+                    let brr = document.createElement("BR");
+
+                    cont.appendChild(nm);
+                    cont.appendChild(gp);
+                    cont.appendChild(brr);
+
+
+
+                    for(let rer = 0; rer < finalPlanDay[w].activities.length; rer++){
+                        let val = document.createElement("p");
+                        let inc = rer + 1;
+                        val.innerHTML = "Activity " + inc + ": " + finalPlanDay[w].activities[rer];
+
+                        cont.appendChild(val);
+                        cont.appendChild(brr);
+                    }
+
+                    document.getElementById("dayItems").appendChild(cont);
+
+                }
+
+                for (let w = 0; w < finalPlanNight.length; w++){
+
+                    console.log("I'm in Night");
+                    let cont = document.createElement("div");
+                    cont.setAttribute("class", "boxing");
+
+                    let nm = document.createElement("p");
+                    nm.innerHTML = "Unit: " + finalPlanNight[w].unit;
+                    nm.setAttribute("class", "unitName");
+
+                    let gp = document.createElement("p");
+                    gp.innerHTML = "Group Number: " + finalPlanNight[w].group;
+                    gp.setAttribute("class", "group Numbers");
+
+                    let brr = document.createElement("BR");
+
+                    cont.appendChild(nm);
+                    cont.appendChild(gp);
+                    cont.appendChild(brr);
+
+
+
+                    let val = document.createElement("p");
+                    val.innerHTML = "Night Activity: " + finalPlanNight[w].activities;
+
+                    cont.appendChild(val);
+                    cont.appendChild(brr);
+                    
+                    document.getElementById("nightItems").appendChild(cont);
+                }
+
 
             }
 
